@@ -1,0 +1,45 @@
+<%= render 'shared/errors', obj: @task  %>
+
+<div class="row">
+ <div class="col-xs-6 col-xs-offset-3 task">
+  <%= form_for(@task, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <div class="form-group">
+   <div class="control-label col-sm-2">
+    <%= f.label :Task %>
+   </div>
+   <div class="col-sm-10">
+    <%= f.text_field :title, class: "form-control", placeholder: "What do you need to do?" %>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="control-label col-sm-2">
+     <%= f.label :due %>
+   </div>
+   <div class="col-sm-10">
+    <%= f.text_field :due, rows: 10, class: "form-control", placeholder: "When is it due?" %>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="control-label col-sm-2">
+    <%= f.label :"Progress" %>
+   </div>
+   <div class="col-sm-10">
+    <%= f.text_area :progress, class: "form-control", placeholder: "What have you done?" %>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="control-label col-sm-2">
+    <%= f.label :"Additional Info" %>
+   </div>
+   <div class="col-sm-10">
+    <%= f.text_area :info, class: "form-control", placeholder: "Anything to add?" %>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="col-sm-offset-2 col-sm-10">
+    <%= f.submit class: 'btn btn-primary btn-large btn-default' %>
+   </div>
+  </div>
+<% end %>
+ </div>
+</div>

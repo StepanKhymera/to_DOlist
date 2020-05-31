@@ -1,0 +1,11 @@
+
+<nav>
+  <a><%= link_to "Welcome Page", root_path %></a>
+  <a><%= link_to "All Tasks", tasks_path %></a>
+  <a><%= link_to "New Task", new_task_url %></a>
+  <a><%= link_to "Logout", logout_path, method: :delete %></a>
+</nav>
+
+<h1 align="center" class="to_do" >To Do list</h1>
+<h4 align="center" class="to_do" >the list of things to do</h4><br>
+<h4 align="center" class="to_do" ><%= link_to "What things?", tasks_path %></h4>

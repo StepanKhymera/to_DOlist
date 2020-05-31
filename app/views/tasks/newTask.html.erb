@@ -1,0 +1,11 @@
+<h1 align="center" class="to_do" >Need something done? </h1><br>
+<%= render 'form' %>
+
+<% if @task.errors.any? %>
+ <h2>The following errors prevented the article from saving:</h2>
+ <ul>
+ <% @task.errors.full_messages.each do |msg|%>
+ <li><%= msg %></li>
+ <% end %>
+ </ul>
+<% end %>
