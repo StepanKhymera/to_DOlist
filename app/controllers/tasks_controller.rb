@@ -8,9 +8,9 @@ before_action :set_task, only: [:edit, :update, :show, :destroy]
     @task = Task.all
   end
 
-  def progr
-    @progr = Task.where("subject = 'study'")
-    @task = @progr
+  def prorg
+    @prorg = Task.where("subject = 'study'")
+    @task = @prorg
     render 'index'
   end
 

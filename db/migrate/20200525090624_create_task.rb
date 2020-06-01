@@ -7,5 +7,5 @@ class CreateTask < ActiveRecord::Migration[6.0]
       t.text :info
       t.string :subject
     end
-
+  end
 end
